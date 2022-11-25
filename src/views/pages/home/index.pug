@@ -1,0 +1,11 @@
+extends Views/layouts/default.pug
+
+//- Инициализация переменных для использования в макетах
+block variables
+  - const title = 'Проект SFERA — официальный сайт'
+
+append script
+  script(src=require('./main.js') defer)
+
+append style
+  link(href=require('./styles.scss') rel='stylesheet')

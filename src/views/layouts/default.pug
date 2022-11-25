@@ -1,0 +1,66 @@
+//- Локальные переменные
+//- если понадобятся
+
+//- Внешние переменные
+block variables
+
+doctype html
+html(lang='ru' dir='ltr')
+  head
+    //- Meta
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='description' content='Главная страница SFERA.zone')
+
+    link(rel='icon' href=require('Images/favicons/favicon-16px.png') type='image/png' sizes='16x16')
+    link(rel='icon' href=require('Images/favicons/favicon-32px.png') type='image/png' sizes='32x32')
+    link(rel='icon' href=require('Images/favicons/favicon-64px.png') type='image/png' sizes='64x64')
+
+    //- Стили страницы
+  block style
+    link(rel='stylesheet' href=require('Styles/main.scss'))
+
+    //- Page title
+    title= title
+
+  body
+
+    header.header
+      .header__container
+        .logo
+          a.logo__link(href="#") SFERA
+        .nav-global
+          nav
+            ul
+              li SFERA
+              li Блог
+              li Новости
+              li База знаний
+        .nav-landings 
+          nav
+            ul
+              li Asap 
+              li MeetNet 
+              li Job Lite
+              li Find Friends
+              li Black Box
+        
+        .music-switch 
+          button.header-button.button-music Turn music on
+
+        .link-video
+          button.header-button.button-video Video
+
+        .langs
+          ul
+            li Ru 
+            li En 
+            li Če
+
+        //- Search
+        //- Link to Sfera Manifest
+        
+
+    //- Page scripts
+    block script
+
