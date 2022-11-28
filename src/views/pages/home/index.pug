@@ -2,7 +2,7 @@ extends Views/layouts/default.pug
 
 //- Инициализация переменных для использования в макетах
 block variables
-  - const title = 'Проект SFERA — официальный сайт'
+  - const title = 'Проект SFERA — главная страница'
   - const description = 'Описание страницы'
 
 append script
@@ -11,3 +11,7 @@ append script
 
 append style
   link(href=require('./styles.scss') rel='stylesheet')
+
+block content 
+  //- Свою верстку пишем здесь
+  h1 this is content of page

@@ -1,1 +1,1 @@
-console.log('\n>> Home page');
+console.log('\n>> Cookies legacy page');

@@ -1,1 +1,1 @@
-console.log('\n>> Home page');
+console.log('\n>> Docs page');
