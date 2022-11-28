@@ -1,7 +1,19 @@
-.nav-global {
-  color: red;
+@charset "UTF-8";
 
-  &__link {
-    font-size: 0.8em;
-  }
-}
+// 1. Абстракции
+@import
+  'abstracts/colors',
+  'abstracts/breakpoints',
+  'abstracts/variables';
+
+// 2. Сторонние библиотеки
+@import
+  'vendors/normalize';
+
+// 3. Базис
+
+// 4. Компоненты
+
+// 5. Макеты
+
+// 6. Темы

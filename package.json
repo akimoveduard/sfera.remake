@@ -6,10 +6,13 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "webpack --mode=production --progress",
-    "preview": "npm run build && http-server dist -og"
+    "preview": "npm run build && http-server dist -og",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "http-server": "^14.1.1",
     "pug-plugin": "^4.5.0",
     "sass": "^1.54.1",

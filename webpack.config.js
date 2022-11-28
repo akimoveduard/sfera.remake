@@ -11,12 +11,21 @@ module.exports = (env, argv) => {
 
     entry: {
       index: 'src/views/pages/home/index.pug',
+      news: 'src/views/pages/news/index.pug',
+      news_article: 'src/views/pages/news-article/index.pug',
+      blog: 'src/views/pages/news/index.pug',
+      blog_article: 'src/views/pages/blog-article/index.pug',
+      docs: 'src/views/pages/docs/index.pug',
+      company: 'src/views/pages/company/index.pug',
+      contacts: 'src/views/pages/contacts/index.pug',
+      legacy: 'src/views/pages/legacy/index.pug',
+      cookies: 'src/views/pages/cookies/index.pug',
+      map: 'src/views/pages/map/index.pug',
     },
 
     output: {
       path: path.join(__dirname, 'dist'),
       publicPath: 'auto',
-      // output filename of scripts
       filename: 'assets/js/[name].[contenthash:8].js',
       chunkFilename: 'assets/js/[name].[id].js',
       clean: true,
@@ -33,12 +42,9 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      // enable processing of Pug files from entry
       new PugPlugin({
-        //verbose: !isProd, // output information about the process to console
-        pretty: !isProd, // formatting of HTML
+        pretty: !isProd,        
         extractCss: {
-          // output filename of styles
           filename: 'assets/css/[name].[contenthash:8].css',
         },
       }),

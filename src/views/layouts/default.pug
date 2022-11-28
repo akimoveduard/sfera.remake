@@ -10,7 +10,7 @@ html(lang='ru' dir='ltr')
     //- Meta
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
-    meta(property='description' content='Главная страница SFERA.zone')
+    meta(property='description' content= description)
 
     link(rel='icon' href=require('Images/favicons/favicon-16px.png') type='image/png' sizes='16x16')
     link(rel='icon' href=require('Images/favicons/favicon-32px.png') type='image/png' sizes='32x32')
@@ -25,41 +25,11 @@ html(lang='ru' dir='ltr')
 
   body
 
-    header.header
-      .header__container
-        .logo
-          a.logo__link(href="#") SFERA
-        .nav-global
-          nav
-            ul
-              li SFERA
-              li Блог
-              li Новости
-              li База знаний
-        .nav-landings 
-          nav
-            ul
-              li Asap 
-              li MeetNet 
-              li Job Lite
-              li Find Friends
-              li Black Box
-        
-        .music-switch 
-          button.header-button.button-music Turn music on
+    .page
 
-        .link-video
-          button.header-button.button-video Video
+      include ../includes/header.pug
 
-        .langs
-          ul
-            li Ru 
-            li En 
-            li Če
-
-        //- Search
-        //- Link to Sfera Manifest
-        
+      include ../includes/footer.pug
 
     //- Page scripts
     block script
