@@ -14,4 +14,56 @@ append style
 
 block content 
   //- Свою верстку пишем здесь
-  h1 this is content of page
+head
+title Contact Us
+h1 Contact Us
+p Any question or remarks? Just write us a message!
+body
+.body_contact_info
+  h1 Contact Information
+  p text
+.body_contacts
+  img(src='Whatsapp' alt='Whatsapp' srcset='')
+  br
+  a(href='')
+  img(src='logoGmail' alt='Gmail')
+  br
+  a(href='')
+  img(src='logoGmail' alt='Gmail')
+  br
+  a(href='')
+.body_feedback_form
+  form(action='Feedback')
+    div
+      label First name
+      br
+      input(type='First name')
+      br
+      label Last name
+      br
+      input(type='Last name')
+      br
+      label Your email
+      br
+      input#email(type='email' name='email')
+      br
+      label Your phone number
+      br
+      input(type='Phone Number')
+      br
+    fieldset
+      legend Select Subject
+      div
+        input#1(type='checkbox' name='1')
+        label(for='first reason')
+        input#2(type='checkbox' name='2')
+        label(for='2')
+        input#3(type='checkbox' name='3')
+        label(for='3')
+      br
+    div
+      label Message
+      br
+      input(type='Message')
+      br
+      input(type='button' value='Send Message')
