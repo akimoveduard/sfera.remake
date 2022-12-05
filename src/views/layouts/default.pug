@@ -15,13 +15,13 @@ html(lang='ru' dir='ltr')
     link(rel='icon' href=require('Images/favicons/favicon-16px.png') type='image/png' sizes='16x16')
     link(rel='icon' href=require('Images/favicons/favicon-32px.png') type='image/png' sizes='32x32')
     link(rel='icon' href=require('Images/favicons/favicon-64px.png') type='image/png' sizes='64x64')
-
-    //- Стили страницы
-  block style
-    link(rel='stylesheet' href=require('Styles/main.scss'))
-
+    
     //- Page title
     title= title
+
+    //- Стили страницы
+    block style
+      link(href=require('Styles/main.scss') rel='stylesheet')
 
   body
 

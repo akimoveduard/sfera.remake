@@ -1,0 +1,53 @@
+-
+  const navMain = [
+    {
+      title: 'Новости',
+      url: '/news.html'
+    },
+    {
+      title: 'Блог',
+      url: '/blog.html'
+    },
+    {
+      title: 'База данных',
+      url: '/docs.html'
+    },
+    {
+      title: 'Компания',
+      url: '/company.html'
+    }
+  ]
+
+-
+  const navProducts = [
+    {
+      title: 'Asap',
+      url: '/asap.html'
+    },
+    {
+      title: 'Meet Net',
+      url: '/meetnet.html'
+    },
+    {
+      title: 'Job Lite',
+      url: '/joblite.html'
+    },
+    {
+      title: 'Find Friends',
+      url: '/findfriends.html'
+    },
+    {
+      title: 'Black Box',
+      url: '/blackbox.html'
+    }
+  ]
+
+ul.nav-list.nav-list_products
+  each link in navProducts
+    li.nav-list__item
+      a.nav-list__link(href= link.url)= link.title
+
+ul.nav-list.nav-list_main
+  each link in navMain 
+    li.nav-list__item
+      a.nav-list__link(href= link.url)= link.title

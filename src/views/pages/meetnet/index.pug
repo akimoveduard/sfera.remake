@@ -2,7 +2,7 @@ extends Views/layouts/default.pug
 
 //- Инициализация переменных для использования в макетах
 block variables
-  - const title = 'Проект SFERA — Блог'
+  - const title = 'Проект SFERA — Meet Net'
   - const description = 'Описание страницы'
 
 append script
@@ -11,7 +11,6 @@ append script
 append style
   link(href=require('./styles.scss') rel='stylesheet')
 
-<<<<<<< Updated upstream
 block content
   main.main(role="main")
     // Уберите section__wrapper если не нужен (он ограничивает ширину контейнера до 1440 пискселей)
@@ -25,8 +24,3 @@ block content
         li Выгода 1
         li Выгода 2
         li Выгода 3
-=======
-block content 
-  section
-    h1 Блог компании SFERA 
->>>>>>> Stashed changes

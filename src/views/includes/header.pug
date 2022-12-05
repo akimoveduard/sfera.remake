@@ -1,9 +1,22 @@
-header.header(role="header")
+header.header.section(role="header")
+<<<<<<< Updated upstream
+  .header__container.section__wrapper
+=======
   .header__container.section__container
+>>>>>>> Stashed changes
 
     .logo
       a.logo__link(href="#")
         img.logo__image(src=require('Images/logo.svg'))
+<<<<<<< Updated upstream
+    
+  nav.nav.section(role="nav")
+    .nav__container.section__wrapper
+      include ../includes/nav.pug
+=======
 
-    include ./main-menu.pug
+    nav 
+      include ./main-menu.pug
+    
     include ./products-menu.pug
+>>>>>>> Stashed changes

@@ -1,4 +1,64 @@
-footer.footer(role="footer")
-  .footer__container.section__container
-  
-  include ../includes/copyright.pug
+-
+  const navFooterMain = [
+    {
+      title: 'Новости',
+      url: '/news.html'
+    },
+    {
+      title: 'Блог',
+      url: '/blog.html'
+    },
+    {
+      title: 'База данных',
+      url: '/docs.html'
+    },
+    {
+      title: 'Компания',
+      url: '/company.html'
+    }
+  ]
+
+-
+  const navFooterProducts = [
+    {
+      title: 'Asap',
+      url: '/asap.html'
+    },
+    {
+      title: 'Meet Net',
+      url: '/meetnet.html'
+    },
+    {
+      title: 'Job Lite',
+      url: '/joblite.html'
+    },
+    {
+      title: 'Find Friends',
+      url: '/findfriends.html'
+    },
+    {
+      title: 'Black Box',
+      url: '/blackbox.html'
+    }
+  ]
+
+footer.footer.section(role="footer")
+  .footer__container.section__wrapper
+    .footer__logo 
+      a.logo__link(href="#")
+        img.logo__image.logo__image_in-footer(src=require('Images/footer-logo.png'))
+      h3 Мы не будем менять мир, мы перепишем код
+    .footer__menu-products
+      h2 Продукты SFERA
+      ul.nav-list.nav-list_products
+        each link in navFooterProducts
+          li.nav-list__item
+            a.nav-list__link(href= link.url)= link.title
+    .footer__menu-main
+      ul.nav-list.nav-list_main
+        each link in navFooterMain 
+          li.nav-list__item
+            a.nav-list__link(href= link.url)= link.title
+
+
+    include ../includes/copyright.pug

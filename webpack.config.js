@@ -21,6 +21,11 @@ module.exports = (env, argv) => {
       policy: 'src/views/pages/policy/index.pug',
       cookies_policy: 'src/views/pages/cookies/index.pug',
       map: 'src/views/pages/map/index.pug',
+      asap: 'src/views/pages/asap/index.pug',
+      blackbox: 'src/views/pages/blackbox/index.pug',
+      findfriends: 'src/views/pages/findfriends/index.pug',
+      joblite: 'src/views/pages/joblite/index.pug',
+      meetnet: 'src/views/pages/meetnet/index.pug',
     },
 
     output: {
