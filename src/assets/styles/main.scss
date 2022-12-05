@@ -10,23 +10,19 @@
 @import
   'vendors/normalize';
 
-<<<<<<< Updated upstream
 // 3. База
 @import
   'base/fonts',
+  'base/base',
   'base/typography';
-=======
 // 3. Базис
 @import
   'base/fonts',
   'base/base';
->>>>>>> Stashed changes
 
 // 4. Компоненты
 
-
 // 5. Макеты
-<<<<<<< Updated upstream
 @import 
   'layout/page',
   'layout/section',
@@ -35,10 +31,5 @@
   'layout/nav',
   'layout/nav-list',
   'layout/footer';
-=======
-@import
-  'layout/section',
-  'layout/header';
->>>>>>> Stashed changes
 
 // 6. Темы
