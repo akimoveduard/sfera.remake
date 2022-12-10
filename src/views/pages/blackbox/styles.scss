@@ -1,18 +1,14 @@
-@use '../../../assets/styles/abstracts/colors' as colors;
-body {
-    height: 700px;
+                                                                                                                                @use '../../../assets/styles/abstracts/colors' as colors;
+body{
     background: -webkit-linear-gradient(#414141, #000000);
     color: white;
-    text-align: center
-    
+    text-align:center
 }
+
 h1 {
-        font-size: 250%
+    font-size: 250%
     }
 
-img.phone_blackbox{
-    float: right
-}
 button {
     background-color: white;
     border: none;
@@ -27,13 +23,276 @@ button {
     cursor: pointer;
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
     }
+
 button:hover {
-	background: rgba(0,0,0,0);
-	color: white;
-	box-shadow: inset 0 0 0 3px white;
+    background: rgba(0,0,0,0);
+    color: white;
+    box-shadow: inset 0 0 0 3px white;
+}
+img.BlackBox_img{
+    position:absolute;
+    width: 200;
+    height: 200;
+    border-radius: 80px;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.aboutBlackbox{
+    display: inline-block;
+    top: 50%;
+    padding-top: 200px;
+}
+h1.aboutBlackbox{
+    margin-top: 100px;
+    margin-bottom: -150px;
+}
+
+.aboutBlackboxtext{
+    display: flex;
+}
+img.aboutBlackboxlogo{
+    width: 100;
+    height: 100;
+}
+.statystic{
+    display: flex;
+    border: dashed;
+    border-color: white;
+    justify-content: center;
+    column-gap:10%
+}
+$menu-width: 350px;
+$scene-width: 1000px;
+$scene-height: 400px;
+
+$sections: Team1, Team2, Team3, Team4;
+
+$colors: (
+  Team1: #000000,
+  Team2: #000000,
+  Team3: #000000,
+  Team4: #000000,
+  white: #fff,
+  gray: #eee
+);
+
+$pictograms: (
+  Team1: url('https://boomstarter.hb.bizmrg.com/uploads/user/avatar/1010478/large_1596034615-avatar.jpg'),
+  Team2: url('https://boomstarter.hb.bizmrg.com/uploads/user/avatar/1010478/large_1596034615-avatar.jpg'),
+  Team3: url('https://boomstarter.hb.bizmrg.com/uploads/user/avatar/1010478/large_1596034615-avatar.jpg'),
+  Team4: url('https://boomstarter.hb.bizmrg.com/uploads/user/avatar/1010478/large_1596034615-avatar.jpg')
+);
+
+@function get-color($color-name) {
+  @if map-has-key($colors, $color-name) {
+    @return map-get($colors, $color-name);
+  }
+
+  @else {
+    @warn "This color key doesn't exist."
+  }
+}
+
+@function get-picto-url($picto-name) {
+  @if map-has-key($pictograms, $picto-name) {
+    @return map-get($pictograms, $picto-name);
+  }
+ 
+  @else {
+    @warn "This pictogram key doesn't exist."
+  }
+}
+
+@keyframes slidein {
+  0% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: -$scene-height;
+    opacity: 0;
+  }
+}
+.monolog{
+  background: get-color(gray);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  #scene {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: $scene-width;
+    height: $scene-height;
+    position: absolute;
+    top: 220%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: get-color(white);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+                0 1px 2px rgba(0,0,0,0.24);
+    overflow: hidden;
+
+    #left-zone {
+      background: get-color(white);
+      height: 75%;
+      flex-grow: 0;
+      display: flex;
+      width: $menu-width;
+      align-items: center;
+      justify-content: left;
+
+      .list{
+        display: flex;
+        list-style: none;
+        align-content: stretch;
+        flex-direction: column;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+
+        li.item {
+
+           input[type="radio"] {
+
+            display: none;
+
+            & ~ label {
+              display: block;
+              opacity: 0.5;
+              height: 50px;
+              text-align: center;
+              line-height: 50px;
+
+              &:first-letter {
+                text-transform: uppercase;
+              }
+
+              &:hover {
+                opacity: 0.75;
+                cursor: pointer;
+              }
+
+              @each $item in $sections{
+                &.label_#{$item} {
+                  &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    margin-left: 15px;
+                    background-image: get-picto-url($item);
+                    background-position: center;
+                    background-size: 75% 75%;
+                    background-repeat: no-repeat;
+                  }
+                }
+              }
+            }
+
+            & ~ .content {
+              position: absolute;
+              left: $menu-width;
+              top: -$scene-height;
+              width: $scene-width - $menu-width;
+              height: $scene-height;
+              animation-duration: 0.75s;
+              animation-name: slideout;
+              animation-timing-function: ease-out;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              @each $item in $sections{
+                &.content_#{$item} {
+
+                  .picto {
+                    height: 100px;
+                    width: 100px;
+                    background-image: get-picto-url($item);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+
+                  h1{
+                    color: get-color($item);
+                  }
+                }
+              }
+
+              h1 {
+                &:first-letter {
+                  text-transform: uppercase;
+                }
+              }
+              p {
+                max-width: 50%;
+                text-align: center;
+                color: #000000;
+              }
+            }
+            &:checked{
+              & ~ label {
+                opacity: 1;
+                animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                
+                @each $item in $sections{
+                  &.label_#{$item} {
+                    color: get-color($item);
+                    border-right: solid 4px get-color($item);
+                  }
+                }
+              }
+              & ~ .content {
+                animation-duration: 0.75s;
+                animation-name: slidein;
+                animation-fill-mode: forwards;
+                animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #middle-border {
+      background-color: get-color(gray);
+      height: 75%;
+      flex-grow: 1;
+      max-width: 2px;
+      z-index: 0;
+    }
+    
+    #right-zone {
+      background: get-color(white);
+      height: 100%;
+      flex-grow: 3;
+    }
+  }
 }

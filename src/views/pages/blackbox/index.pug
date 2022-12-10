@@ -17,16 +17,56 @@ block content
     .main__container.section__wrapper
       // Верстаем здесь
       head
-      title Black Box
+        title Black Box
       body
-      h1 Самовыражение и свобода с Black Box
-      h2 Говори  открыто и смело с анонимным приложением Black Box 
-      //img.phoneBlackBox (картинка черной коробки из приложения в телефоне)
-      button Открой мир Black Box
-      // p Идентификация
-      //ul 
-        li Меньше социальной тревожности
-        li Меьше самоанализа
-        li Открытое и смелое самовыражение
-        li Меньше последствий негативных социальных взаимодействий
-        li Общение с легкостью и свободой
+        block.title
+        h1 Самовыражение и свобода с Black Box
+        h2 Говори  открыто и смело с анонимным приложением Black Box 
+        img.BlackBox_img(src=require('Images/Blackbox/Blackbox.jpg'))
+        button Открой мир Black Box
+        block.aboutBlackbox
+          h1.aboutBlackbox Что же такое BlackBox?
+          br
+          h2.aboutBlackbox Это приложение, которе позволяет...
+          br
+          block.aboutBlackboxtext
+            .text1 
+              img.aboutBlackboxlogo(src=require('Images/Blackbox/Icon_geo.png'))
+              p Находить новое общение по геолокации и беседовать на любые темы с любым пользователем
+            .text2 
+              img.aboutBlackboxlogo(src=require('Images/Blackbox/Icon_anonim.png'))
+              p Общаться анонимно, забыв про социальную тревожность и чрезмерный самоанализ
+            .text3 
+              img.aboutBlackboxlogo(src=require('Images/Blackbox/Icon_meeting.png'))
+              p Знакомиться тем, кому не хватает общения и у кого есть вопросы на не простые темы
+          h1 Немного цифр
+          block.statystic
+            .statystic1
+              h1 40
+              p Человек работают над нашим проектом
+            .statystic2
+              h1 12
+              p Сервисов в одном приложении
+            .statystic3
+              h1 1000+
+              p Скачиваний приложения
+            - var datas = { 'Team1': 'Проект SFERA — это платформа приложений. Также в отношении нас будут корректны термины: супер приложение, анти соц.сеть.', 'Team2': 'SFERA обладает функционалом мессенджера, социальной сети, видеосервиса, сервиса по поиску работы и деловым контактам, сервис знакомств и многое другое, что уже есть сейчас и будет в будущем.', 'Team3': 'Проект SFERA — это независимый проект, который создает небольшая команда, главная цель которого — изменить мир к лучшему.', 'Team4': 'SFERA находится вне политики, вне государственности. Мы считаем своим домом весь мир и хотим работать на благо всех людей на планете. Мы считаем, что наш мир можно сделать лучше и он должен быть лучше. Мы верим, что это возможно.'}
+            div#scene
+              #left-zone
+                ul.list
+                  each val, index in datas
+                    li.item
+                      if index == "Team1"
+                        input(type="radio", id='radio_' + val name="basic_carousel" value=val checked)
+                      else
+                        input(type="radio", id='radio_' + val name="basic_carousel" value=val) 
+                      label(for='radio_' + val, class='label_' + index)
+                        | #{index}
+                      div(class='content content_' + index)
+                        span(class='picto')
+                        h1
+                          | #{index}
+                        p
+                          | #{val}
+              #middle-border
+              #right-zone
