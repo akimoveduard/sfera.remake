@@ -6,10 +6,15 @@ block variables
   - const description = 'Описание страницы'
 
 append script
-  script(src=require('./main.js') defer)
+  script(src=require('./swiper_scss/swiper-bundle.min.js'))
+  script(src=require('./main.js'))
+  
 
 append style
   link(href=require('./styles.scss') rel='stylesheet')
+  link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css')
+  link(rel="stylesheet", href=require("./swiper_scss/swiper-bundle.min.css"))
 
 block content
   main.main(role="main")
@@ -31,6 +36,64 @@ block content
             span.content-info Eto Kruto 
           p.content-info Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           a.info__btn(href="#") More info
-          
 
-      
+    //- Benefits
+    section.cards
+      h2.cards__cards-title  Meet Net 
+      .content-cards
+        article.card
+          i.far.fa-clone  
+          h3.card__card-title Tittle card
+          p.card__card-text dolor sit amet consectetur adipisicing elit. Neque obcaecati excepturi optio labore. Perferendis unde id alias ad quasi eum debitis soluta placeat sint natus velit, aliquid doloremque quidem voluptas!
+          
+        article.card
+          i.far.fa-object-group  
+          h3.card__card-title Tittle card
+          p.card__card-text dolor sit amet consectetur adipisicing elit. Neque obcaecati excepturi optio labore. Perferendis unde id alias ad quasi eum debitis soluta placeat sint natus velit, aliquid doloremque quidem voluptas!
+
+        article.card
+          i.far.fa-clone  
+          h3.card__card-title Tittle card
+          p.card__card-text dolor sit amet consectetur adipisicing elit. Neque obcaecati excepturi optio labore. Perferendis unde id alias ad quasi eum debitis soluta placeat sint natus velit, aliquid doloremque quidem voluptas!
+        
+    //- Statistics
+    h4.statistics-header Statistics
+    .container-statistics
+      article.statistics
+        h5.statistics__header-statistics  7 
+        p.statistics__text-statistics  Apps already running
+      article.statistics
+        h5.statistics__header-statistics  1070 
+        p.statistics__text-statistics  Project completed
+      article.statistics
+        h5.statistics__header-statistics  300+ 
+        p.statistics__text-statistics  Thousands downloads
+      article.statistics
+        h5.statistics__header-statistics  4/5 
+        p.statistics__text-statistics  Rating on Google Play
+
+
+        //- Slider
+    section.container-slider
+      .testimonial.mySwiper
+        .testi-content.swiper-wrapper
+          .slide.swiper-slide
+            img.image(src='https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2011/07/outdoor-portraits-1.jpg?w=2000&ssl=1', alt='')
+            p.slider-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nesciunt aliquam similique soluta beatae voluptatum ad dolores.
+            i.bx.bxs-quote-alt-left.quote-icon
+            .details
+              span.name Alina Sferovna
+              span.job Web Developer
+          .slide.swiper-slide
+            img.image(src='https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60', alt='')
+            p.slider-text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, libero recusandae soluta ipsa reiciendis omnis consequatur, aperiam itaque modi deleniti quis eos ratione. Natus nesciunt voluptas unde, ea dignissimos obcaecati.
+            i.bx.bxs-quote-alt-left.quote-icon
+            .details
+              span.name Adam Spencer
+              span.job iOS Developer
+        .swiper-button-next
+        .swiper-button-prev
+        .swiper-pagination
+
+

@@ -1,4 +1,7 @@
 @use '../../../assets/styles/abstracts/colors' as colors;
+
+
+
 section{
  
   position: relative;
@@ -11,15 +14,20 @@ section{
   background: aquamarine;
   background-size: cover;
   background-position: center;
-  padding-top: 100px ;
+ 
 
 }
 
 .content{
     max-width: 650px;
-    margin: 60px 100px;
+    margin-top:150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 0px;
+    
   }
- h1.content-info{ color: #226A80;
+ h1.content-info{ 
+    color: #226A80;
     font-size: 55px;
     text-transform: uppercase;
     font-weight: 800;
@@ -52,6 +60,135 @@ section{
     padding: 10px 20px;
     border-radius: 5px;
     transition: 0.3s;
-    transition-property: background;
-    
+    transition-property: background; 
   }
+
+  // Benefits
+  .cards{
+    padding-top: 0px;
+  }
+
+  .content-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+   
+  }
+  .card {
+    width: 30%;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+    i {
+      margin: 30px 0 20px 0;
+      color:#cc9199 ;
+      font-size: 50px;
+    }
+  }
+  .cards__cards-title {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #226A80;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .card__card-text {
+    padding-left: 10px;
+    text-align: start;
+  }
+
+  // Statictics
+
+  .container-statistics{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 140px;
+    margin-left: 200px;
+    padding-right: 50px;
+  }
+
+
+    h4{
+      text-align: center;
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #226A80;
+      padding-bottom: 25px;
+    }
+    
+    h5{
+      font-size: 25px;
+      font-weight: bold;
+      color: green;
+      text-align: center;
+      margin: 0px;
+      
+    }
+    
+    
+
+    // Slider
+
+    .container-slider {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color:#e3f2fd ;
+    }
+    .testimonial {
+      max-width: 900px;
+      position: relative;
+      width: 100%;
+      padding: 50px 0;
+      background-color:#fff;
+      overflow: hidden;
+      .image {
+        height: 170px;
+        width: 170px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+    }
+    .slide {
+      .slider-text {
+        padding: 0 100px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+      }
+      .quote-icon {
+        font-size: 30px;
+        color: #4070f4;
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .details {
+      .name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+      }
+      .job {
+        font-size: 15px;
+        font-weight: 400;
+        color: #333;
+      }
+    }
+    
