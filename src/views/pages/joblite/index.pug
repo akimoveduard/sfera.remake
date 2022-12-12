@@ -16,11 +16,34 @@ block content
     // Уберите section__wrapper если не нужен (он ограничивает ширину контейнера до 1440 пискселей)
     .main__container.section__wrapper
       // Верстаем здесь
-      h1 Крутой заголовок
-      h2 Подзаголовок
-      button Призыв к действию
-      p Идентификация
-      ul 
-        li Выгода 1
-        li Выгода 2
-        li Выгода 3
+      head
+        h1 Крутой заголовок
+        h2 Подзаголовок
+      body
+      .search
+        form
+          input(type='text' placeholder='Должность или профессия...')
+          button(type='submit')
+      .joblite_info
+        .block1
+          img(src=require('Images/joblite/icon_job.png'))
+          h2 something
+          p text
+        .block2
+          img(src=require('Images/joblite/icon_job.png'))
+          h2 something
+          p text
+        .block3
+          img(src=require('Images/joblite/icon_job.png'))
+          h2 something
+          p text
+      .statistic
+        .block1
+          h2 something
+          p text
+        .block2
+          h2 something
+          p text
+        .block3
+          h2 something
+          p text
