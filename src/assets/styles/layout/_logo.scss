@@ -1,8 +1,30 @@
 .logo {
+  display: inline-block;
+  
+  &__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
 
+  &__image {
+    width: 2.5em;
+    object-fit: cover;
+    padding-right: 0.5em;
+  }
 
-  &__image_in-footer {
-    width: 8rem;
+  &__title {
+    font-weight: $fontBasic_Weight_Bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: $colorsLogoTitle;
+  }
+
+  &_location_header {
+    padding: 1em 1em 1em 0;
   }
 
 }

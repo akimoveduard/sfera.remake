@@ -1,6 +1,9 @@
 .page {
   height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: $colorsPrimary;
+  color: white;
 }

@@ -1,12 +1,26 @@
 header.header.section(role="header")
 
-  .header__container.section__wrapper
+  .header__container
 
-    .logo
-      a.logo__link(href="#")
-        img.logo__image(src=require('Images/logo.svg'))
-    
-  nav.nav.section(role="nav")
-    .nav__container.section__wrapper
-      include ../includes/nav.pug
+    .topbar
+      .topbar__container.section__wrapper
+        .topbar__info
+          p.topbar__info-content SFERA — цифровая экосистема по принципу All-in-One (Все-в-одном)
+        .langs
+          select.langs-select(onchange="if (this.value) window.location.href = this.value")
+            option.lang-select__item.langs-select__item_ru(value="#") RU
+            option.lang-select__item.langs-select__item_en(value="#") EN
+            option.lang-select__item.langs-select__item_cs(value="#") CS
 
+    .navbar
+      .navbar__container.section__wrapper
+        .logo.logo_location_header
+          a.logo__link(href="#")
+            img.logo__image(src=require('Images/sfera.svg'))             
+            span.logo__title Sfera
+        nav.main-nav 
+          ul.main-nav__list.dropdown-menu
+            li.main-nav__item.dropdown-menu__button Products
+              p.dropdown-menu__content This is something
+            li.main-nav__item News
+            li.main-nav__item Blog

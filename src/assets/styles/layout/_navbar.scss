@@ -1,0 +1,10 @@
+.navbar {
+  background: $colorsHeaderNavbarBg;
+  padding: 0.5em 0;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

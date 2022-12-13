@@ -1,0 +1,15 @@
+.dropdown-menu {
+
+  &__button {
+    position: relative;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__button:hover &__content {
+    display: block;
+    position: absolute;
+  }
+}

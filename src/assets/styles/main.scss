@@ -15,6 +15,7 @@
   'base/fonts',
   'base/base',
   'base/typography';
+
 // 3. Базис
 @import
   'base/fonts',
@@ -26,10 +27,13 @@
 @import 
   'layout/page',
   'layout/section',
+  'layout/topbar',
+  'layout/main-nav',
+  'layout/dropdown-menu',
+  'layout/navbar',
   'layout/logo',
+  'layout/langs-select',
   'layout/header',
-  'layout/nav',
-  'layout/nav-list',
   'layout/footer';
 
 // 6. Темы
