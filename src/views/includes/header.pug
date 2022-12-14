@@ -20,7 +20,11 @@ header.header.section(role="header")
             span.logo__title Sfera
         nav.main-nav 
           ul.main-nav__list.dropdown-menu
-            li.main-nav__item.dropdown-menu__button Products
-              p.dropdown-menu__content This is something
-            li.main-nav__item News
-            li.main-nav__item Blog
+            li.main-nav__item.dropdown-menu__button 
+              a.main-nav__link(href="#") Products                             
+              .main-nav__submenu.dropdown-menu__content
+                a(href="/blog.html") This is something
+            li.main-nav__item
+              a.main-nav__link(href="#") News
+            li.main-nav__item
+              a.main-nav__link(href="#") Blog

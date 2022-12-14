@@ -8,6 +8,27 @@
   }
 
   &__item {
-    margin-right: 2em;
+    margin: 0 1.5em 0 0;
+    padding: 0.4em;
+    transition-duration: 0.5s;
+  }
+
+  &__item:hover {
+    background: #8A86BF;
+    transition-duration: 0.5s;
+  }
+
+  &__link {
+    display: inline-block;
+    color: white;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  &__submenu {
+    background: #cccccc;
+    top: 2em;
+    right: -0.4em;
+    padding: 0.5em;
   }
 }
