@@ -1,1 +1,0 @@
-{"version":3,"file":"assets/js/main.15.9e2575dd.js","mappings":"AAAAA,QAAQC,IAAI","sources":["webpack://sfera-zone/./src/views/pages/blackbox/main.js"],"sourcesContent":["console.log('\\n>> Black Box landing page');\r\n"],"names":["console","log"],"sourceRoot":""}
