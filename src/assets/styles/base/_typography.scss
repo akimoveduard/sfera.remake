@@ -1,5 +1,13 @@
 .title {
 
+  &_type_page {
+    font-size: 2.7em;
+    font-weight: $fontBasicWeightBold;
+    line-height: 1.7em;
+    margin: 0;
+    padding: 0;
+  }
+
   &_type_post {
     font-size: 1.3em;
     font-weight: $fontBasicWeightBold;
@@ -7,6 +15,15 @@
 }
 
 .text {
+
+  &_type_page-lead {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    line-height: 1.8em;
+    letter-spacing: -0.03em;
+    color: #9C98D9;
+  }
 
   &_type_lead {
     font-size: 0.9em;
