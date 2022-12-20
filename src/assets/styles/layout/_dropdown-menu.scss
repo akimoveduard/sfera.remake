@@ -9,7 +9,7 @@
   &__button::after {
     display: inline-block;
     content: '▼';
-    margin-left: 0.5em;
+    margin-left: 0.3em;
     font-size: 0.6em;
     transition-duration: 0.5s;
   }
@@ -25,13 +25,16 @@
     visibility: hidden;
     position: absolute;
     margin: 0;
+    padding: 0;
     opacity: 0;
-    transition-duration: 0.5s;
+    z-index: 10000;
   }
 
   &__button:hover &__content {
+    display: block;
     visibility: visible;
     opacity: 1;
     transition-duration: 0.5s;
+    left: 0;
   }
 }

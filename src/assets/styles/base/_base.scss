@@ -1,5 +1,9 @@
 html {
   box-sizing: border-box;
+}
+
+body {
   font-size: 100%;
   font-family: $fontBasic;
+  font-weight: $fontBasicWeightLight;
 }

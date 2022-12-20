@@ -4,6 +4,39 @@ extends Views/layouts/default.pug
 block variables
   - const title = 'Проект SFERA — Новости'
   - const description = 'Описание страницы'
+  - const heading = 'Новости'
+  - const lead = 'Что нового, обновления, патчноуты, разработка'
+  -
+    const posts = [
+      {
+        title: "Видеозвонки пришли в SFERU",
+        lead: "Теперь пользователи SFERA могут общаться не только голосом, но и всей мощью мимики своего лица. Попробуйте видеозвонки. Мы благодарнём всех тех, кто пожертвует нам обратную связь об этой фиче.",
+        image: "videocall.jpg",
+        url: "#",
+        date: '06.12.2022',
+      },
+      {
+        title: "Полистаем ленту SFERA",
+        lead: "В ленту теперь попадают хроники. Добавили возможность сохранять ценные моменты.",
+        image: "newslenta.jpg",
+        url: "#",
+        date: "02.12.2022",
+      },
+      {
+        title: "Встречайте рейтинг",
+        lead: "Любое действие пользователя в SFERE теперь меняет рейтинг: повышает или понижает. Что смогут пользователи с высоким рейтингом? Что ожидает пользователей с низким рейтингом?",
+        image: "1-2-3.jpg",
+        url: "#",
+        date: "02.12.2022",
+      },
+      {
+        title: "Пилим SFERU вери хард",
+        lead: "Ой, у нас тут огромный список того, что добавили в SFERU в новом патче. Например, теперь можно регистрироваться и входить с помощью аккаунтов Apple и Google. В iOS-приложении теперь можно скачивать видео. А еще мы отловили тонну багов. И чуть не забыли упомянуть про уведомления о звонках через SFERU.",
+        image: "miners.jpg",
+        url: "#",
+        date: "07.07.2022",
+      }
+    ]
 
 append script
   script(src=require('../../../assets/scripts/index.js') defer)
@@ -12,6 +45,14 @@ append script
 append style
   link(href=require('./styles.scss') rel='stylesheet')
 
-block content 
-  //- Свою верстку пишем здесь
-  h1 this is content of page
+block content
+  .news.section__wrapper    
+    each post in posts
+      article.news__post
+        img.news__post-image(src=require("Images/news/" + post.image))
+        .news__post-content
+          .news__post-lead-wrapper
+            h2.news__post-title.title_type_post= post.title 
+            p.news__post-lead.text_type_lead= post.lead
+          .news__post-more
+            a.news__post-link(href= post.url) Подробности

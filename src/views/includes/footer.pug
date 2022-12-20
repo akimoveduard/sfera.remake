@@ -1,2 +1,113 @@
-footer.footer 
-  p footer
+-
+  const links = [
+    {
+      title: 'Продукты',
+      url: 'index.html'
+    },
+    {
+      title: 'Блог',
+      url: 'blog.html'
+    },
+    {
+      title: 'Новости',
+      url: 'news.html'
+    },
+    {
+      title: 'База знаний',
+      url: 'blog.html'
+    },
+    {
+      title: 'Команда',
+      url: 'company.html'
+    },
+    {
+      title: 'Инвесторам',
+      url: 'company.html'
+    },
+    {
+      title: 'Карта сайта',
+      url: 'map.html'
+    },
+    {
+      title: 'Политика о куках',
+      url: 'company.html'
+    },
+  ]
+
+footer.footer.section(role="footer")
+
+  .footer__container.section__wrapper
+
+    .footer__logo 
+      a.footer__logo-link(href="#")
+        img.footer__logo-image(src=require("Images/sfera.png"))
+
+    nav.footer__products
+      ul.footer__products-list
+        li.footer__products-item
+          a.footer__products-link(href="#") Asap
+        li.footer__products-item
+          a.footer__products-link(href="#") Meetnet
+        li.footer__products-item
+          a.footer__products-link(href="#") Job Lite
+        li.footer__products-item
+          a.footer__products-link(href="#") Black Box
+        li.footer__products-item
+          a.footer__products-link(href="#") Choose
+        li.footer__products-item
+          a.footer__products-link(href="#") Find Friends
+        li.footer__products-item
+          a.footer__products-link(href="#") Videos
+
+    .footer__badges-links
+      ul.footer__badges-links-list 
+        li.footer__badge-links-item
+          a.footer__badge-link.footer__badge-link_google(
+            href="https://play.google.com/store/apps/details?id=zone.sfera&hl=ru"
+            title="Скачать приложение с Google Play"
+            target="_new") Скачать с Google Play
+        li.footer__badge-links-item
+          a.footer__badge-link.footer__badge-link_appstore(
+            href="https://apps.apple.com/ru/app/sfera-project/id1498046044"
+            title="Скачать приложение с App Store"
+            target="_new") Скачать с App Store
+
+    .footer__links-container
+
+      .footer__links
+        .footer__site-links
+          h2.footer__title Самое важное
+          ul.footer__site-links-list
+            each link in links
+              li.footer__site-links-item
+                a.footer__site-link(href= link.url)= link.title
+        .footer__social-links 
+          ul.footer__social-links-list
+            li.footer__social-links-item
+              a.footer__social-link.footer__social-link_vk(href="#") ВКонтакте
+            li.footer__social-links-item
+              a.footer__social-link.footer__social-link_youtube(href="#") YouTube
+            li.footer__social-links-item
+              a.footer__social-link.footer__social-link_telegram(href="#") Telegram
+
+      .footer__contacts 
+        h2.footer__title Контакты
+        ul.footer__contacts-list
+          li.footer__contacts-item.footer__contacts-item_whatsapp What's App основателя SFERA: 
+            a.footer__contacts-link(href="https://api.whatsapp.com/send/?phone=420774715626") +420 774 715 626
+          li.footer__contacts-item.footer__contacts-item__email-info По общим вопросам: 
+            a.footer__contacts-link(href="mailto:info@sfera.zone") info@sfera.zone
+          li.footer__contacts-item.footer__contacts-item__email-job По вопросам вакансий: 
+            a.footer__contacts-link(href="mailto:job@sfera.zone") job@sfera.zone
+
+    .footer__slogan
+      p.footer__slogan-text Мы не будем менять мир, мы просто перепишем код.
+
+    .footer__copyright 
+
+      .footer__copyright-text
+        p © 2019—2022 Проект SFERA | Все права защищены ООО&nbsp;«СФЕРА»
+      
+      .footer__policy
+        p
+          a.footer__policy-link(href="#") Политика конфиденциальности и обработки данных

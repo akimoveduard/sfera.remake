@@ -5,7 +5,7 @@ header.header.section(role="header")
     .topbar
       .topbar__container.section__wrapper
         .topbar__info
-          p.topbar__info-content SFERA — цифровая экосистема по принципу All-in-One (Все-в-одном)
+          p.topbar__info-content SFERA — цифровая экосистема по принципу «Все-в-одном»
         .langs
           select.langs-select(onchange="if (this.value) window.location.href = this.value")
             option.lang-select__item.langs-select__item_ru(value="#") RU
@@ -15,16 +15,43 @@ header.header.section(role="header")
     .navbar
       .navbar__container.section__wrapper
         .logo.logo_location_header
-          a.logo__link(href="#")
+          a.logo__link(href="/")
             img.logo__image(src=require('Images/sfera.svg'))             
             span.logo__title Sfera
         nav.main-nav 
           ul.main-nav__list.dropdown-menu
             li.main-nav__item.dropdown-menu__button 
-              a.main-nav__link(href="#") Products                             
-              .main-nav__submenu.dropdown-menu__content
-                a(href="/blog.html") This is something
+              a.main-nav__link(href="/index.html") Продукты
+              .main-nav__submenu-content.dropdown-menu__content
+                ul.main-nav__submenu-list
+                  li.main-nav__submenu-item.main-nav__submenu-item_asap
+                    a.main-nav__submenu-link(href="/asap.html") Asap
+                      span.main-nav__submenu-item-text Мультифункциональный мессенджер
+                  li.main-nav__submenu-item.main-nav__submenu-item_meetnet
+                    a.main-nav__submenu-link(href="#") Meetnet
+                      span.main-nav__submenu-item-text Познакомиться
+                  li.main-nav__submenu-item.main-nav__submenu-item_joblite
+                    a.main-nav__submenu-link(href="#") Job Lite
+                      span.main-nav__submenu-item-text Найти работу мечты
+                  li.main-nav__submenu-item.main-nav__submenu-item_blackbox
+                    a.main-nav__submenu-link(href="#") Black Box
+                      span.main-nav__submenu-item-text Общаться по геолокации
+                  li.main-nav__submenu-item.main-nav__submenu-item_choose
+                    a.main-nav__submenu-link(href="#") Choose
+                      span.main-nav__submenu-item-text Узнать мнение аудитории
+                  li.main-nav__submenu-item.main-nav__submenu-item_findfriends
+                    a.main-nav__submenu-link(href="#") Find Friends
+                      span.main-nav__submenu-item-text Найти новых друзей
+                  li.main-nav__submenu-item.main-nav__submenu-item_videos
+                    a.main-nav__submenu-link(href="#") Videos
+                      span.main-nav__submenu-item-text Смотреть и развиваться
             li.main-nav__item
-              a.main-nav__link(href="#") News
+              a.main-nav__link(href="/index.html") Будущее
             li.main-nav__item
-              a.main-nav__link(href="#") Blog
+              a.main-nav__link(href="/blog.html") Блог
+            li.main-nav__item
+              a.main-nav__link(href="/news.html") Новости
+            li.main-nav__item
+              a.main-nav__link(href="/docs.html") База знаний
+            li.main-nav__item
+              a.main-nav__link(href="/company.html") Компания

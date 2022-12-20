@@ -1,1 +1,0 @@
-{"version":3,"file":"assets/js/main.4.4c971c61.js","mappings":"AAAAA,QAAQC,IAAI","sources":["webpack://sfera-zone/./src/views/pages/news-article/main.js"],"sourcesContent":["console.log('\\n>> News article page');\r\n"],"names":["console","log"],"sourceRoot":""}

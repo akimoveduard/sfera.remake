@@ -1,7 +1,4 @@
-//- Локальные переменные
-//- если понадобятся
-
-//- Внешние переменные
+//- Переменные
 block variables
 
 doctype html
@@ -28,8 +25,15 @@ html(lang='ru' dir='ltr')
     .page
 
       include ../includes/header.pug
-
-      block content
+      
+      main.main.main_layout_default.section
+        .section__wrapper
+          .main__header
+            h1.main__title= heading
+            p.main__lead= lead
+        
+        .main__content
+          block content
 
       include ../includes/footer.pug
 

@@ -1,5 +1,19 @@
-body {
-  font-size: 100%;
-  font-family: $fontBasic;
-  font-weight: $fontBasic_Weight_Normal;
+.title {
+
+  &_type_post {
+    font-size: 1.3em;
+    font-weight: $fontBasicWeightBold;
+  }
+}
+
+.text {
+
+  &_type_lead {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+
+  &_weight_black {
+    font-weight: $fontBasicWeightBlack;
+  }
 }
