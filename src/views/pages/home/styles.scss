@@ -1,0 +1,233 @@
+
+.wrapper {
+	// background: linear-gradient(90deg,#880fc4 0%,#1d39f2 100%);
+    background: #F2F2F2;
+	min-height: 100vh;
+    width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__header {
+		font-size: 42px;
+		font-weight: 500;
+		margin: 50px 0px;
+		text-align: center;
+        color: #222222;
+        font-family: 'Poppins';
+        font-style: normal;
+
+	}
+    &__article {
+		font-size: 30px;
+		text-align: center;
+		font-weight: 300;
+		margin-bottom: 80px;
+        color: #666666;
+        font-family: 'Poppins';
+        font-style: normal;
+        
+        
+	}
+}
+.cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.card {
+	width: 600px;
+	height: 230px;
+	border-radius: 15px;
+	margin: 7px;
+	padding: 20px 30px;
+	position: relative;
+    background: #FFFFFF;
+	box-shadow: 10px 20px 25px rgba(0,0,0,0.2);
+	&__card-img {
+		height: 90px;
+		width: 90px;
+		border: 2px solid #f2f2f2;
+		border-radius: 50%;
+		position: absolute;
+		top: -40px;
+		left: 20px;
+	}
+	&__card-text {
+		font-size: 16px;
+		margin-top: 40px;
+		margin-bottom: 65px;
+        color: #222222;
+	}
+	&__card-name {
+		font-weight: 500;
+        color: #222222;
+		
+	}
+    &__card-job {
+		color: #333;
+		font-weight: 400;
+		font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: #222222;
+	}
+	i {
+		font-size: 60px;
+		position: absolute;
+		bottom: 20px;
+		right: 25px;
+		color: #b2ebc3;
+	}
+	&:hover {
+		transform: scale(1.1);
+		color: #333;
+		background: #fff;
+		z-index: 10000;
+	}
+}
+
+
+// Download 
+
+.downloads{
+    background:  #222222;
+    width: 100%;
+    height: auto;
+    &__header{
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: #666666;
+        padding-top:120px;
+        text-transform: uppercase;
+    }
+}
+
+
+.download-cards  {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+
+}
+
+.download-card{
+    width: 200px;
+    height: 75px;
+    background: #000;
+    float: left;
+    border-radius: 4px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+ 
+    margin: 0 20px;
+
+    i{
+    color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+    }
+
+    &__text{
+        position: absolute;
+	    left: 70px;
+        top: 20px;
+	    font-size: 12px;
+
+    }
+    
+    &__text-2{
+        position: absolute;
+	    left: 70px;
+        top: 35px;
+	    font-size: 16px;
+
+    }
+    &:hover{
+        filter: invert(100%);
+    }
+}
+
+// FAQ
+
+// .textcols {
+// 	white-space: nowrap;
+// 	.textcols-item {
+// 		&:first-child {
+// 			margin-right: 4%;
+// 		}
+// 	}
+// }
+// .textcols-item {
+// 	white-space: normal;
+// 	display: inline-block;
+// 	width: 48%;
+// 	vertical-align: top;
+// 	background: #fff2e1;
+// }
+
+.faq{
+    background: #F2F2F2;
+    
+}
+
+
+.textcols {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.textcols-item {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	height: 48%;
+    margin-left: 6%;
+	
+	+ {
+		.textcols-item {
+			margin-left: 4%;
+            margin-top: 150px;
+            
+		}
+	}
+
+    &__header{
+        color: #222222;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 5px;
+        margin-top: 30px;
+        
+    }
+
+    &__article{
+        color: #222222;
+        font-size: 16px;
+        margin-bottom: 60px;
+        // padding-bottom: 60px;
+    }
+
+    &__text{
+        color:#222222; 
+        font-size: 19px;
+        margin-bottom: 29px;
+        
+    }
+}
+
