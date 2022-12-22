@@ -1,4 +1,4 @@
-extends Views/layouts/default.pug
+extends Views/layouts/landing.pug
 
 //- Инициализация переменных для использования в макетах
 block variables
@@ -12,4 +12,32 @@ append style
   link(href=require('./styles.scss') rel='stylesheet')
 
 block content
-  
+  article.landing.meetnet
+    .landing__hero.meetnet__hero
+      .section__wrapper
+        .landing__hero-columns
+          .landing__hero-intro.meetnet__intro
+            h1.landing__hero-title.meetnet__hero-title MeetNet
+            p.landing__hero-lead.meetnet__hero-text Приложение для создания крепких отношений. Заполни анкету и найди идеального партнера.
+          .landing__hero-image.meetnet__image
+    .landing__features.meetnet__features 
+      .section__wrapper
+        .landing__features-columns.meetnet__features-columns
+          .landing__features-image-wrapper
+            img.landing__features-image(src=require("Images/landings-images/meetnet-feat-image.png"))
+          .landing__features-content
+            h2.landing__section-title.meetnet__features-title Крепкие отношения
+            p.landing__lead-text.meetnet__lead-text Как сохранить отношения и сделать их по-настоящему крепкими? Лучшие советы всегда основаны на опыте людей, которые преуспели в своем деле.
+            ul.landing__features-list.meetnet__features-list
+              li.landing__features-item.meetent__fetures-item
+                h3.landing__feature-title Цените отношения и любовь
+                p.landing__feature-text Не принимайте друг друга как должное, чтобы не потерять в один момент.
+              li.landing__features-item.meetent__fetures-item
+                h3.landing__feature-title Регулярно общайтесь
+                p.landing__feature-text Больше говорите друг с другом, обсуждайте волнующие темы и просто болтайте ни о чем.
+              li.landing__features-item.meetent__fetures-item
+                h3.landing__feature-title Общие темы
+                p.landing__feature-text Находите общие интересы, увлечения и хобби. Велосипеды, настольные игры или спортзал. Это объединяет.
+              li.landing__features-item.meetent__fetures-item
+                h3.landing__feature-title Не слушайте советов
+                p.landing__feature-text Часто советчики желают зла или просто глупы.

@@ -1,1 +1,34 @@
+@use '../../../assets/styles/abstracts/variables' as vars;
 @use '../../../assets/styles/abstracts/colors' as colors;
+@use '../../../assets/styles/abstracts/breakpoints' as breakpoints;
+
+.meetnet {  
+
+  &__hero {
+    background-image: url("../../../assets/images/landings-images/meetnet-cover.jpg");
+    background-position: top center;
+    background-size: contain;
+    //background-repeat: no-repeat;
+  }
+
+  &__intro {
+    background-image: url("../../../assets/images/landings-images/meetnet-logo.png");
+    background-size: 6em;
+    //background-size: 5em 5em;
+    background-repeat: no-repeat;
+    background-position: left 1.2em;
+    padding-left: 7em;
+  }
+
+  &__image {
+    background-image: url("../../../assets/images/landings-images/meetnet-hero-image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 7em;
+  }
+
+  &__features {
+    background-color: #535073;
+    padding: 4em 0;
+  }
+}
